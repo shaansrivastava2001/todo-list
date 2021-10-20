@@ -4,6 +4,7 @@ let mainlist = document.querySelector(".mylist");
 let clearAllBtn = document.querySelector(".bottom-line button");
 let alertmsg = document.querySelector(".alert");
 
+showmylist();
 // for the button to be disabled when nothing is present in the input field
 let inputactive = ()=>{
     let fulldata = newtodo.value;
@@ -77,13 +78,12 @@ function edit(index){
     let webtask = localStorage.getItem("Fresh Todo");
     let taskobj = JSON.parse(webtask);
     newtodo.value = taskobj[index];
-    addbtn.style.display = "none";
-    savebtn.style.display = "block";
 }
 
 
 let savebtn = document.getElementsByClassName("save");
 function save(){
+    console.log("sss");
     let addbtn = document.getElementsByClassName("add");
     let webtask = localStorage.getItem("Fresh Todo");
     let taskobj = JSON.parse(webtask);
