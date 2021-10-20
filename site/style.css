@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #bebebe;
+    height: 100vh;
+    width: 100%;
+}
+
+nav a{
+    font-weight: 600;
+}
+
+.container{
+    margin-top: 10rem;
+    max-width: 40rem;
+    padding: 3rem;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (min-width:768px){
+    .new-todo button{
+        margin-left: 40px;
+    }
+}
+
+.new-todo button{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.new-todo button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.new-todo{
+    display: flex;
+}
+
+
+.new-todo input{
+    outline: none;
+    width: 85%;
+    height: 100%;
+    border-radius: 2px;
+    border: 1px solid grey;
+    font-size: 1.2em;
+    padding: 3px;
+    padding-left: 10px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.container .mylist{
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+    max-height: 30em;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.mylist li{
+    list-style: none;
+    margin: 10px;
+    width: 100%;
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.mylist li:hover{
+    cursor: pointer;
+}
+
+.mylist li span .fa-trash-alt{
+    color: rgb(211, 111, 18);
+    position: absolute;
+    right: 1em;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.mylist li span .fa-edit{
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    right: 3.3em;
+}
+
+.bottom-line{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: 500;
+    align-items: center;
+}
+
+.bottom-line button{
+    outline: none;
+    border: none;
+}
+
+.bottom-line button{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.bottom-line button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media(max-width: 660px){
+    .container{
+        max-width: 24rem;
+        max-height: 40rem;
+        padding: 3rem;
+        border-radius: 10px;
+        overflow-y: auto;
+        }
+}
+
+
+@media(max-width: 340px){
+    .container{
+        max-width: 15rem;
+        max-height: 40rem;
+    }
+}
+
+.editbox{
+    display: none;
+}
+
+.new-todo .add{
+    display: block;
+}
+
+.new-todo .save{
+    display: none;
+}
+
+.footer span{
+    color: red;
+}
